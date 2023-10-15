@@ -32,3 +32,6 @@ For the compressed space symbol ```10110011```:
 This is an even number meaning the condition of the sum of the width of bars must be even is already satisfied,
 therefore the next digit must be a 0: ```1101100110```
 1. Add the trailing 0 to the end: ```11011001100```
+
+## References
+[https://en.wikipedia.org/wiki/Code_128](https://en.wikipedia.org/wiki/Code_128)
