@@ -1,11 +1,15 @@
 def compress(pattern: str) -> str:
     """Return the compressed version of a Code 128 symbol pattern"""
     # Remove the first and last two digits
-    return pattern[1:9]
+    return pattern[1:9] if len(pattern) == 11 else '00000000'
 
 
 def decompress(pattern: str) -> str:
     """Return the decompressed version of a Code 128 symbol pattern"""
+    # Special case for the stop sequence
+    if pattern == '00000000':
+        return '1100011101011'
+
     # Start with a 1
     d = "1"
 
