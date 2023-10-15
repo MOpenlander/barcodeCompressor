@@ -25,9 +25,9 @@ def decompress(pattern: str) -> str:
 
 
 if __name__ == '__main__':
-    space = '11011001100'
-    compressed = compress(space)
-    decompressed = decompress(compressed)
-
-    print(compressed)
-    print(decompressed)
+    with open('128Patterns.txt', 'r') as f:
+        for pat in f:
+            pat = pat.strip()
+            compressed = compress(pat)
+            decompressed = decompress(compressed)
+            print(f'{pat}, {compressed}, {decompressed}, {pat == decompressed}')
