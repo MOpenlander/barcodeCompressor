@@ -33,5 +33,11 @@ This is an even number meaning the condition of the sum of the width of bars mus
 therefore the next digit must be a 0: ```1101100110```
 1. Add the trailing 0 to the end: ```11011001100```
 
+## Usage
+On a memory-limited device which needs to be able to produce Code 128 barcodes,
+store the compressed barcode table and implement the decompression logic.
+It can then use the 128 A, B, and C tables to find the index of which pattern to use.
+A barcode can be built from the decompressed pattern.
+
 ## References
 [https://en.wikipedia.org/wiki/Code_128](https://en.wikipedia.org/wiki/Code_128)
