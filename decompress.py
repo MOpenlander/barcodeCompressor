@@ -24,6 +24,9 @@ def decompress(pattern: str) -> str:
 
 def decompress_from_byte(b: bytes) -> str:
     """Return the decompressed version of a Code 128 symbol pattern"""
+    if b == b'':
+        return decompress('00000000')
+
     p = ''
     for i in b:
         p += int_to_binary(i)
